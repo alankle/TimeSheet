@@ -6,8 +6,8 @@
 
 /* Space out content a bit */
 body, form, ul, table {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Phoenix flash messages */
@@ -17,6 +17,8 @@ body, form, ul, table {
 form.link, form.button {
   display: inline;
 }
+
+
 
 
 .alert {
