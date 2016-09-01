@@ -1,0 +1,30 @@
+<h2>Listing timesheets</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Checkout</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for timesheet <- @timesheets do %>
+    <tr>
+      <td><%= timesheet.name %></td>
+      <td><%= timesheet.category %></td>
+      <td><%= timesheet.checkout %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: timesheet_path(@conn, :show, timesheet), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: timesheet_path(@conn, :edit, timesheet), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: timesheet_path(@conn, :delete, timesheet), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New timesheet", to: timesheet_path(@conn, :new) %>

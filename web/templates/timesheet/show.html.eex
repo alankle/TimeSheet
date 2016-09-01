@@ -1,0 +1,23 @@
+<h2>Show timesheet</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @timesheet.name %>
+  </li>
+
+  <li>
+    <strong>Category:</strong>
+    <%= @timesheet.category %>
+  </li>
+
+  <li>
+    <strong>Checkout:</strong>
+    <%= @timesheet.checkout %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: timesheet_path(@conn, :edit, @timesheet) %>
+<%= link "Back", to: timesheet_path(@conn, :index) %>

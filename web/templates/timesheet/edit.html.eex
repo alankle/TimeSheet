@@ -1,0 +1,6 @@
+<h2>Edit timesheet</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: timesheet_path(@conn, :update, @timesheet) %>
+
+<%= link "Back", to: timesheet_path(@conn, :index) %>
