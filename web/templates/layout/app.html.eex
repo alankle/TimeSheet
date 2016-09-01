@@ -43,11 +43,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav navbar-right">
-         <!--
-         <li><%= link_to "Home",   '/' %></li>
-         <li><%= link_to "Check-In",   hns_path %></li>  
-         <li><%= link_to "Emergency List",  visites_path  %></li>
-         -->
+         
       </ul>
     </div>
   </div>
