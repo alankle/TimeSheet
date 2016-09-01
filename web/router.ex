@@ -17,8 +17,10 @@ defmodule Timesheet.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/timesheets", TimesheetController
   end
 
+  
   # Other scopes may use custom stacks.
   # scope "/api", Timesheet do
   #   pipe_through :api
