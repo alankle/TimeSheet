@@ -41,10 +41,11 @@ defmodule Timesheet.TimesheetController do
 
   def search(conn, %{"name" => name}) do
       timesheet = Repo.get!(Timesheet, name)
-      changeset = Timesheet.changeset(timesheet)
-      render(conn, "index.html", timesheet: timesheet, changeset: changeset)
+     
+      render(conn, "index.html", timesheet: timesheet)
   end
 
+ 
 
   def update(conn, %{"id" => id, "timesheet" => timesheet_params}) do
     timesheet = Repo.get!(Timesheet, id)
