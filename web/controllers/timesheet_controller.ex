@@ -6,7 +6,12 @@ defmodule Timesheet.TimesheetController do
   plug :scrub_params, "timesheet" when action in [:create, :update]
 
   def index(conn, _params) do
-    timesheets = Repo.all(Timesheet)
+
+    checkin_only = from t in Timesheet,
+    where: t.checkout == false
+
+
+    timesheets = Repo.all(checkin_only)
     render(conn, "index.html", timesheets: timesheets)
   end
 
@@ -39,13 +44,18 @@ defmodule Timesheet.TimesheetController do
     render(conn, "edit.html", timesheet: timesheet, changeset: changeset)
   end
 
-  def search(conn, %{"name" => name}) do
-      timesheet = Repo.get!(Timesheet, name)
-     
-      render(conn, "index.html", timesheet: timesheet)
-  end
+  
 
- 
+  # search  by user name
+  def search(conn,  %{"form_name" => name}) do  
+    user_name = name     
+    search_by_username = from t in Timesheet,
+    where: like(t.name, ^user_name["name"])
+
+    timesheets = Repo.all(search_by_username)
+
+    render(conn, "index.html", timesheets: timesheets)
+  end
 
   def update(conn, %{"id" => id, "timesheet" => timesheet_params}) do
     timesheet = Repo.get!(Timesheet, id)
@@ -60,6 +70,7 @@ defmodule Timesheet.TimesheetController do
         render(conn, "edit.html", timesheet: timesheet, changeset: changeset)
     end
   end
+
 
   def delete(conn, %{"id" => id}) do
     timesheet = Repo.get!(Timesheet, id)

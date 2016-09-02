@@ -1,4 +1,4 @@
-<h2>New timesheet</h2>
+<h2>Check-In</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: timesheet_path(@conn, :create) %>

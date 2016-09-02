@@ -18,6 +18,9 @@ defmodule Timesheet.Router do
 
     get "/", PageController, :index
     resources "/timesheets", TimesheetController
+
+    get "/search", TimesheetController, :search
+    get "/checkout", TimesheetController, :checkout
   end
 
   

@@ -1,6 +1,6 @@
 <h2>Edit timesheet</h2>
 
-<%= render "form.html", changeset: @changeset,
+<%= render "checkout_form.html", changeset: @changeset, timesheet:  @timesheet, 
                         action: timesheet_path(@conn, :update, @timesheet) %>
 
 <%= link "Back", to: timesheet_path(@conn, :index) %>

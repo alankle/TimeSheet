@@ -1,0 +1,35 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <ul>
+    <li>
+      <strong>Name:</strong>
+      <%= @timesheet.name %>
+    </li>
+
+    <li>
+      <strong>Category:</strong>
+      <%= @timesheet.category %>
+    </li>
+
+<li>
+      <strong>Created at:</strong>
+      <%= @timesheet.inserted_at %>
+    </li>
+
+  </ul>
+
+  <div class="form-group">
+    <%= label f, :checkout, class: "control-label" %>
+    <%= checkbox f, :checkout, class: "form-control" %>
+    <%= error_tag f, :checkout %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,6 +1,13 @@
 <h2>Listing timesheets</h2>
 
+
+<%= form_for @conn, timesheet_path(@conn, :search), [as: :forname, method: :get], fn f -> %>
+  <%= text_input f, :name %>
+  <%= submit "Search" %>
+<% end %>
+
 <hr>
+
 
 <table class="table">
   <thead>
@@ -20,13 +27,13 @@
       <td><%= timesheet.checkout %></td>
 
       <td class="text-right">
-        <%= link "Show", to: timesheet_path(@conn, :show, timesheet), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: timesheet_path(@conn, :edit, timesheet), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: timesheet_path(@conn, :delete, timesheet), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+        <!-- <%= link "Show", to: timesheet_path(@conn, :show, timesheet), class: "btn btn-default btn-xs" %> -->
+        <%= link "Check-OUT", to: timesheet_path(@conn, :edit, timesheet), class: "btn btn-default btn-xs" %>
+        <!--<%= link "Delete", to: timesheet_path(@conn, :delete, timesheet), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %> -->
       </td>
     </tr>
 <% end %>
   </tbody>
 </table>
 
-<%= link "New timesheet", to: timesheet_path(@conn, :new) %>
+<%= link "Check-IN", to: timesheet_path(@conn, :new) %>
