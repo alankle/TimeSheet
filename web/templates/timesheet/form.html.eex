@@ -5,11 +5,25 @@
     </div>
   <% end %>
 
+
+ <!-- 
   <div class="form-group">
     <%= label f, :name, class: "control-label" %>
     <%= text_input f, :name, class: "form-control" %>
     <%= error_tag f, :name %>
   </div>
+
+  -->
+
+
+  <div class="form-group">
+      <%= label f, :name, class: "control-label" %>
+      <%= select , :name, ["Name 1": "Name 2", "Name 3": "Name 4"], prompt: "Choose your Name", class: "form-control" %>
+
+  </div>
+
+
+
 
   <div class="form-group">
     <%= label f, :category, class: "control-label" %>
