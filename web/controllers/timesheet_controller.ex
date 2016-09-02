@@ -27,7 +27,7 @@ defmodule Timesheet.TimesheetController do
       {:ok, _timesheet} ->
         conn
         |> put_flash(:info, "Timesheet created successfully.")
-        |> redirect(to: timesheet_path(conn, :index))
+        |> redirect(to: page_path(conn, :index))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
@@ -65,7 +65,7 @@ defmodule Timesheet.TimesheetController do
       {:ok, timesheet} ->
         conn
         |> put_flash(:info, "Timesheet updated successfully.")
-        |> redirect(to: timesheet_path(conn, :show, timesheet))
+        |> redirect(to: page_path(conn, :index))
       {:error, changeset} ->
         render(conn, "edit.html", timesheet: timesheet, changeset: changeset)
     end

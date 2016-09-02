@@ -5,23 +5,28 @@
     </div>
   <% end %>
 
-  <ul>
-    <li>
-      <strong>Name:</strong>
-      <%= @timesheet.name %>
-    </li>
 
-    <li>
-      <strong>Category:</strong>
-      <%= @timesheet.category %>
-    </li>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Checkout</th>
+        <th>Entered at</th>
 
-<li>
-      <strong>Created at:</strong>
-      <%= @timesheet.inserted_at %>
-    </li>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @timesheet.name %></td>
+        <td><%= @timesheet.category %></td>
+        <td><%= @timesheet.checkout %></td>
+        <td><%= @timesheet.inserted_at %></td>
+      </tr>
 
-  </ul>
+    </tbody>
+  </table>
 
   <div class="form-group">
     <%= label f, :checkout, class: "control-label" %>

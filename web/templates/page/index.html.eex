@@ -1,36 +1,63 @@
 <div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+  <h2><%= gettext "Welcome to %{name}", name: "Flexim Timesheet App!" %></h2>
+  <p class="lead">Please check In and Out your work <br />and break Time.</p>
 </div>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="http://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+<!-- Work row -->
+ <div class="row">
+  <div class="col-xs-6 col-sm-3">     
+    
+  </div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-6 col-sm-3">           
+    <p align="center">
+      <a href="timesheets/new">
+        <button type="button" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+          Work Log-In
+        </button>
+      </a>      
+    </p>
+  </div>
+  <div class="col-xs-6 col-sm-3">       
+   <p align="center">
+      <a href="timesheets">
+        <button type="button" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+          Work Log-out
+        </button>
+        </a>
+    </p>
+  </div>
+    <div class="col-xs-6 col-sm-3">       
+      
+    </div>
   </div>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+  <hr>
+<!-- Break row -->
+<div class="row">
+  <div class="col-xs-6 col-sm-3">     
+    
   </div>
-</div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-6 col-sm-3">           
+    <p align="center">
+      <button type="button" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+        Break Log-In
+      </button>
+    </p>
+  </div>
+  <div class="col-xs-6 col-sm-3">       
+   <p align="center">
+      <button type="button" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+        Break Log-out
+      </button>
+    </p>
+  </div>
+    <div class="col-xs-6 col-sm-3">       
+      
+    </div>
+  </div>

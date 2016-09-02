@@ -1,4 +1,4 @@
-<h2>Listing timesheets</h2>
+<h2>Listing Check-outs</h2>
 
 
 <%= form_for @conn, timesheet_path(@conn, :search), [as: :forname, method: :get], fn f -> %>
@@ -28,7 +28,7 @@
 
       <td class="text-right">
         <!-- <%= link "Show", to: timesheet_path(@conn, :show, timesheet), class: "btn btn-default btn-xs" %> -->
-        <%= link "Check-OUT", to: timesheet_path(@conn, :edit, timesheet), class: "btn btn-default btn-xs" %>
+        <%= link "Check-Out", to: timesheet_path(@conn, :edit, timesheet), class: "btn btn-default" %>
         <!--<%= link "Delete", to: timesheet_path(@conn, :delete, timesheet), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %> -->
       </td>
     </tr>
@@ -36,4 +36,6 @@
   </tbody>
 </table>
 
-<%= link "Check-IN", to: timesheet_path(@conn, :new) %>
+<hr>
+<%= link "Home", to: page_path(@conn, :index) %>
+

@@ -1,6 +1,7 @@
-<h2>Edit timesheet</h2>
+<h2>Please, check-out</h2>
 
 <%= render "checkout_form.html", changeset: @changeset, timesheet:  @timesheet, 
                         action: timesheet_path(@conn, :update, @timesheet) %>
 
-<%= link "Back", to: timesheet_path(@conn, :index) %>
+<hr>
+<%= link "Home", to: page_path(@conn, :index) %>
