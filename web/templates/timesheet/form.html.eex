@@ -18,7 +18,7 @@
 
   <div class="form-group">
       <%= label f, :name, class: "control-label" %>
-      <%= select , :name, ["Name 1": "Name 2", "Name 3": "Name 4"], prompt: "Choose your Name", class: "form-control" %>
+      <%= select f, :name, ["Name 1": "Name 2", "Name 3": "Name 4"], prompt: "Choose your Name", class: "form-control" %>
 
   </div>
 
