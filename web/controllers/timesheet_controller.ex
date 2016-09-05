@@ -50,7 +50,9 @@ defmodule Timesheet.TimesheetController do
   def search(conn,  %{"form_name" => name}) do  
     user_name = name     
     search_by_username = from t in Timesheet,
-    where: like(t.name, ^user_name["name"])
+    where: like(t.name, ^user_name["name"]) 
+    and t.checkout == :false
+
 
     timesheets = Repo.all(search_by_username)
 
