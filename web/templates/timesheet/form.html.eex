@@ -23,9 +23,9 @@
   </div>
 
   <div class="form-group">
-    <label> Work </label>
+    <label> Work Time</label>
     <%= radio_button f, :category, "Work" , class: "form-control"  %>
-    <label> Break </label>
+    <label> Break Time</label>
     <%= radio_button f, :category, "Break" ,class: "form-control" %>
     <%= error_tag f, :category %>
   </div>
