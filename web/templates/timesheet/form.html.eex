@@ -37,7 +37,7 @@
     <%= error_tag f, :checkout %>
   </div>
   -->
-  
+  <hr>
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>
