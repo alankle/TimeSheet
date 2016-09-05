@@ -1,4 +1,4 @@
-<h2>Please, check-out</h2>
+<h2>Check-out</h2>
 
 <%= render "checkout_form.html", changeset: @changeset, timesheet:  @timesheet, 
                         action: timesheet_path(@conn, :update, @timesheet) %>

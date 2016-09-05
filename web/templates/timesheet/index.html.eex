@@ -1,8 +1,14 @@
 <h2>Listing Check-outs</h2>
 
 
-<%= form_for @conn, timesheet_path(@conn, :search), [as: :forname, method: :get], fn f -> %>
-  <%= text_input f, :name %>
+<%= form_for @conn, timesheet_path(@conn, :search), [as: :form_name, method: :get], fn f -> %>
+
+  <div class="form-group">
+      <%= label f, :name, class: "control-label" %>
+      <%= select f, :name,  ["Name 1": "Name 1", "Name 2": "Name 2","Name 3": "Name 3"], prompt: "Choose your Name", class: "form-control" %>
+      <%= error_tag f, :name %>
+  </div>
+
   <%= submit "Search" %>
 <% end %>
 
