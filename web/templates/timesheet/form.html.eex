@@ -21,7 +21,7 @@
       <%= select f, :name, ["Name 1": "Name 1", "Name 2": "Name 2","Name 3": "Name 3"], prompt: "Choose your Name", class: "form-control" %>
       <%= error_tag f, :name %>
   </div>
-
+<hr>
   <div class="form-group">
     <label> Work Time</label>
     <%= radio_button f, :category, "Work" , class: "form-control"  %>
