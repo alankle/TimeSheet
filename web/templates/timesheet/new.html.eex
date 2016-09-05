@@ -1,15 +1,6 @@
+<h2>Check-In</h2>
 
-
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Check-In</h3>
-  </div>
-  <div class="panel-body">
-   <%= render "form.html", changeset: @changeset,
+<%= render "form.html", changeset: @changeset,
                         action: timesheet_path(@conn, :create) %>
-  </div>
-</div>
-
-
 
 <%= link "Home", to: page_path(@conn, :index) %>
