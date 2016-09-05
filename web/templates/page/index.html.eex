@@ -24,7 +24,7 @@
       <a href="timesheets">
         <button type="button" class="btn btn-primary btn-lg">
           <!-- <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> -->
-         Time Check-out
+         Time Check-Out
         </button>
         </a>
     </p>
