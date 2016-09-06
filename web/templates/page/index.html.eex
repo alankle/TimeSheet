@@ -13,7 +13,7 @@
     <p align="center">
       <a href="timesheets/new">
         <button type="button" class="btn btn-primary btn-lg">
-          <!-- <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> -->
+           <!-- <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> -->
           Time Check-In
         </button>
       </a>      

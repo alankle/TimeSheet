@@ -28,9 +28,9 @@
     </tbody>
   </table>
 
-  <div class="form-group">
-    <%= label f, :checkout, class: "control-label" %>
-    <%= checkbox f, :checkout, class: "form-control" %>
+  <div class="form-group">    
+    <label>Please, check-out! :  </label>
+    <%= checkbox f, :checkout, class: "control-checkbox" %>
     <%= error_tag f, :checkout %>
   </div>
 

@@ -9,7 +9,7 @@
       <%= error_tag f, :name %>
   </div>
 
-  <%= submit "Search" %>
+  <%= submit "Search", class: "btn btn-primary"%>
 <% end %>
 
 <hr>

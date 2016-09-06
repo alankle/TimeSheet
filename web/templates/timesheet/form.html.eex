@@ -24,11 +24,12 @@
 <hr>
   <div class="form-group">
     <label> Work Time</label>
-    <%= radio_button f, :category, "Work" , class: "form-control"  %>
+    <%= radio_button f, :category, "Work" , class: "radio"  %>
     <label> Break Time</label>
-    <%= radio_button f, :category, "Break" ,class: "form-control" %>
+    <%= radio_button f, :category, "Break" ,class: "radio" %>
     <%= error_tag f, :category %>
   </div>
+
 
   <!--
   <div class="form-group">
